@@ -1,0 +1,9 @@
+{
+  "name": "@maldan/go-docdb",
+  "version": "0.0.1",
+  "description": "Go Document DB",
+  "main": "index.js",
+  "keywords": [],
+  "author": "Maldan",
+  "license": "Mit"
+}
