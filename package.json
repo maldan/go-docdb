@@ -1,6 +1,6 @@
 {
   "name": "@maldan/go-docdb",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Go Document DB",
   "main": "index.js",
   "keywords": [],
