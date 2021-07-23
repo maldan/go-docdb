@@ -1,12 +1,6 @@
 package docdb
 
-import (
-	"bytes"
-	"compress/flate"
-	"io"
-)
-
-func compress(data []byte) []byte {
+/*func compress(data []byte) ([]byte, error) {
 	inputFile := new(bytes.Buffer)
 	inputFile.Write(data)
 
@@ -30,3 +24,4 @@ func decompress(data []byte) []byte {
 	io.Copy(outputFile, flateReader)
 	return outputFile.Bytes()
 }
+*/

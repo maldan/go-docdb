@@ -2,10 +2,9 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
-	"log"
-	"os"
 	"time"
+
+	"github.com/maldan/go-docdb"
 )
 
 type Result struct {
@@ -91,13 +90,19 @@ func main() {
 
 	time.Sleep(time.Second * 100)*/
 
-	/*docdb.Start()
+	docdb.Start(docdb.Config{Mode: "os", WriteDelay: 1})
 
 	start := time.Now()
 	var xx XX
-	docdb.Get("examples/lox", "y", &xx)
+	docdb.LoadDocument("examples/lox/y", &xx)
 	fmt.Printf("%v\n", time.Since(start))
-	fmt.Println(xx.Email)*/
+	fmt.Println(xx.Email)
+
+	docdb.SaveDocument("examples/lox/z", &xx)
+
+	docdb.SaveFile("examples/lox/bb", []byte("hello world"), "", "")
+
+	time.Sleep(time.Second * 5)
 
 	/*start = time.Now()
 	docdb.Save("examples/lox", "y", &xx)
@@ -109,7 +114,7 @@ func main() {
 
 	time.Sleep(time.Second * 5)*/
 
-	start := time.Now()
+	/*start := time.Now()
 	dataFile, err := os.OpenFile("../xx/c36e6m44hjv37541rjp0", os.O_RDONLY, 0777)
 	if err != nil {
 		fmt.Println(err)
@@ -123,5 +128,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Println(len(files))
+	fmt.Println(len(files))*/
 }
